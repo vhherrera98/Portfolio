@@ -1,0 +1,36 @@
+@import './color';
+
+footer {
+    background: $black;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+
+    .container {
+        .title {
+            margin: 0 0 20px;
+
+            h1 {
+                color: $white;
+            }
+
+            h1 {
+                letter-spacing: 2px;
+
+                span {
+                    margin-left: 0px;
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .text {
+            p {
+                color: $white;
+                font-size: 15px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.click-arriba {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    background: $black;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    right: -10%;
+    transition: all .5s ease-in-out;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    i{
+        font-size: 2em;
+        color: $white;
+    }
+
+    &.active {
+        right: 20px;
+    }
+}

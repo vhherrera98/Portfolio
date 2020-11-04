@@ -1,0 +1,178 @@
+/* skills section styling */
+
+.skills {
+    padding: 50px 0;
+    background: $white;
+    .container {
+        h1{
+            text-align: center;
+            margin: 0 0 50px;
+            font-size: 3em;
+            color: $black;
+        }
+        .content {
+            display: flex;
+
+            .left {
+                margin: 0 auto;
+                width: 49%;
+                background: #333;
+                border-radius: 50px;
+
+                .slider {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        object-position: center;
+                        object-fit: cover;
+                        transition: .5s;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        border-radius: 20px;
+
+                        &.active {
+                            opacity: 1;
+                        }
+                    }
+
+                    .btnNext {
+                        border-radius: 50%;
+                        cursor: pointer;
+                        height: 50px;
+                        width: 50px;
+                        position: absolute;
+                        top: 40%;
+                        right: 20px;
+                        background: $white;
+                        z-index: 1;
+                        display: flex;
+                        align-items: center;
+                        i{
+                            font-size: 2em;
+                            color: $black;
+                            margin: 0 auto;
+                            
+                        }
+                    }
+
+                    .btnPrev {
+                        border-radius: 50%;
+                        cursor: pointer;
+                        height: 50px;
+                        width: 50px;
+                        position: absolute;
+                        top: 40%;
+                        left: 20px;
+                        background: $white;
+                        z-index: 1;
+                        display: flex;
+                        align-items: center;
+                        i{
+                            font-size: 2em;
+                            color: $black;
+                            margin: 0 auto;
+                            
+                        }
+                    }
+                }
+            }
+
+            .column {
+                width: 100%;
+
+                &.right {
+                    width: 49%;
+                    margin: 0 auto;
+
+                    .bars {
+                        margin-bottom: 15px;
+
+                        .info {
+                            display: flex;
+                            margin-bottom: 5px;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            span {
+                                font-weight: 500;
+                                font-size: 18px;
+                            }
+                        }
+
+                        .line {
+                            height: 5px;
+                            width: 100%;
+                            background: lightgrey;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                                background: crimson;
+                            }
+
+                            &.html::before {
+                                width: 90%;
+                            }
+
+                            &.css::before {
+                                width: 60%;
+                            }
+
+                            &.js::before {
+                                width: 50%;
+                            }
+
+                            &.php::before {
+                                width: 30%;
+                            }
+
+                            &.react::before {
+                                width: 40%;
+                            }
+
+                            &.angular::before {
+                                width: 35%;
+                            }
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skills {
+        .container {
+            .content {
+                flex-direction: column;
+
+                .left {
+                    order: 2;
+                    margin: 50px auto;
+                    height: 400px;
+                    width: 100%;
+                }
+
+                .column {
+
+                    &.right {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
